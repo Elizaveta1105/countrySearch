@@ -19,7 +19,6 @@ function onSearch() {
     if(inputValue.length <= 1) {
         return Notiflix.Notify.warning('Too many matches found. Please enter a more specific name.');
     }    
-
     fetchCountries(inputValue).then(onRenderCountry).catch(onError)
 }  
     
