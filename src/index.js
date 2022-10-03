@@ -59,7 +59,7 @@ function onRenderCountry(data) {
         return countryList.insertAdjacentHTML("beforeend", dataEl)
 
     }
-})
+    })
 }
 
 function onError() {
