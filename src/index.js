@@ -15,10 +15,12 @@ function onSearch() {
     const inputValue = inputField.value.trim()
     countryList.innerHTML = ' '
     countryInfo.innerHTML = ' '
-
-    if(inputValue) {
-        fetchCountries(inputValue).then(onRenderCountry).catch(onError)
+ 
+    if(inputValue.length <= 1) {
+        return Notiflix.Notify.warning('Too many matches found. Please enter a more specific name.');
     }    
+
+    fetchCountries(inputValue).then(onRenderCountry).catch(onError)
 }  
     
 
